@@ -3,6 +3,7 @@ description: It automatically creates an alias for the components and page of th
 repo: kdydesign/nuxt-alias-module
 npm: nuxt-alias
 icon: ''
+thumbnail: 'https://hubsadda.com/wp-content/uploads/2020/04/vidiq-to-tubebuddy.png'
 github: 'https://github.com/kdydesign/nuxt-alias-module'
 website: 'https://github.com/kdydesign/nuxt-alias-module'
 learn_more: ''

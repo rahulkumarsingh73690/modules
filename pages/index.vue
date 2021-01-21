@@ -9,7 +9,7 @@
         <h1
           class="mt-4 text-4xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl"
         >
-          Explore Nuxt Modules
+          Explore Vuejs Projects
         </h1>
         <p
           class="max-w-xl mt-5 mx-auto text-lg sm:text-xl leading-7 text-rainy-grey"

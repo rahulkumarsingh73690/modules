@@ -1,17 +1,16 @@
 <template>
   <div class="flex flex-col h-full">
-    <div class="relative flex flex-1 flex-col space-y-2 px-6 py-8 group">
+    <nuxt-image
+      :src="module.thumbnail"
+      :alt="module.name"
+      width="1280px"
+      height="720px"
+    />
+    <div class="relative flex flex-1 flex-col space-y-2 px-6 py-1 pb-6 group">
       <nuxt-link
         :to="module.slug"
         :aria-label="module.slug"
         class="absolute inset-0"
-      />
-
-      <nuxt-image
-        :src="iconUrl(module)"
-        :alt="module.name"
-        width="40px"
-        height="40px"
       />
 
       <h2 class="flex text-2xl items-center pt-2">

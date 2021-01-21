@@ -2,6 +2,7 @@ name: Python
 description: Nuxt.js module for Ackee analytics
 repo: bdrtsky/nuxt-ackee
 npm: nuxt-ackee
+thumbnail: 'https://hubsadda.com/wp-content/uploads/2020/04/vidiq-to-tubebuddy.png'
 icon: ackee.png
 github: 'https://github.com/bdrtsky/nuxt-ackee'
 website: 'https://github.com/bdrtsky/nuxt-ackee'
