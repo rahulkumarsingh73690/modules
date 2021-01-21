@@ -14,7 +14,7 @@
         <p
           class="max-w-xl mt-5 mx-auto text-lg sm:text-xl leading-7 text-rainy-grey"
         >
-          Discover our list of modules to supercharge your
+          Discover our list of projects to supercharge your
           <a
             href="https://nuxtjs.org"
             rel="noopener"
@@ -25,7 +25,7 @@
         </p>
         <div class="max-w-xl mt-2 mx-auto text-center">
           <a
-            href="https://github.com/nuxt/modules"
+            href="https://github.com/nuxt/projects"
             rel="noopener"
             target="_blank"
             class="text-md leading-4 items-center space-x-1 text-grey-light border-b border-stone-green hover:text-green-500 hover:border-green-600"
@@ -173,10 +173,10 @@
       class="container mx-auto flex flex-col justify-center pt-12 text-stone-green items-center"
     >
       <p>
-        For more information on Nuxt modules, including how to create a module,
+        For more information on Nuxt projects, including how to create a module,
         check out our
         <a
-          href="https://nuxtjs.org/guides/directory-structure/modules"
+          href="https://nuxtjs.org/guides/directory-structure/projects"
           rel="noopener"
           target="_blank"
           class="text-md leading-4 items-center space-x-1 text-grey border-b border-stone-green hover:text-green-500 hover:border-green-600"
@@ -247,13 +247,13 @@ export default {
     },
   },
   async asyncData({ $content }) {
-    const modules = await $content()
+    const projects = await $content()
       .sortBy(FIELDS.DOWNLOADS, ORDERS.DESC)
       .fetch();
     const maintainers = [];
     let downloads = 0;
 
-    modules.forEach((module) => {
+    projects.forEach((module) => {
       downloads += module.downloads || 0;
       module.maintainers.forEach((maintainer) => {
         if (!maintainers.find((m) => m.name === maintainer.name)) {
@@ -263,7 +263,7 @@ export default {
     });
 
     return {
-      modules,
+      projects,
       categories,
       maintainersTotal: maintainers.length,
       downloads,
@@ -282,8 +282,8 @@ export default {
   head() {
     const title = "Explore Nuxt Modules";
     const description =
-      "Discover our list of modules to supercharge your Nuxt project. Created by the Nuxt team and community.";
-    const url = "https://modules.nuxtjs.org";
+      "Discover our list of projects to supercharge your Nuxt project. Created by the Nuxt team and community.";
+    const url = "https://projects.nuxtjs.org";
 
     return {
       title,
@@ -326,22 +326,22 @@ export default {
   },
   computed: {
     filteredModules() {
-      let modules = this.modules;
+      let projects = this.projects;
       if (this.q) {
-        modules = this.fuse.search(this.q).map((r) => r.item);
+        projects = this.fuse.search(this.q).map((r) => r.item);
       } else {
         // Sort only if no search
-        modules.sort((a, b) =>
+        projects.sort((a, b) =>
           sort(a[this.sortBy], b[this.sortBy], this.orderBy === ORDERS.ASC)
         );
       }
       if (this.selectedCategory) {
-        modules = modules.filter(
+        projects = projects.filter(
           (module) => module.category === this.selectedCategory
         );
       }
 
-      return modules;
+      return projects;
     },
     pageFilteredModules() {
       const filteredModules = Object.assign([], this.filteredModules);
@@ -398,8 +398,8 @@ export default {
         "repo",
       ],
     };
-    const index = Fuse.createIndex(fuseOptions.keys, this.modules);
-    this.fuse = new Fuse(this.modules, fuseOptions, index);
+    const index = Fuse.createIndex(fuseOptions.keys, this.projects);
+    this.fuse = new Fuse(this.projects, fuseOptions, index);
 
     const selectedCategory = (window.location.hash || "").substr(1);
     if (selectedCategory) {

@@ -30,7 +30,7 @@ export default /* <NuxtConfig> */ {
     '~/plugins/v-tooltip.ts'
   ],
   content: {
-    dir: 'modules'
+    dir: 'projects'
   },
   manifest: {
     name: 'Nuxt Modules',

@@ -1,11 +1,9 @@
 <template>
   <div class="flex flex-col h-full">
     <div class="relative flex flex-1 flex-col space-y-2 px-6 py-8 group">
-      <a
-        :href="module.website"
-        :aria-label="module.website"
-        target="_blank"
-        rel="noopener"
+      <nuxt-link
+        :to="module.slug"
+        :aria-label="module.slug"
         class="absolute inset-0"
       />
 
