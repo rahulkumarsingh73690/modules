@@ -1,4 +1,4 @@
-name: ackee
+name: Python
 description: Nuxt.js module for Ackee analytics
 repo: bdrtsky/nuxt-ackee
 npm: nuxt-ackee

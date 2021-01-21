@@ -4,7 +4,7 @@ import * as yml from 'js-yaml'
 import globby from 'globby'
 import defu from 'defu'
 import fetch from 'node-fetch'
-import { fetchGithubPkg, modulesDir, distDir, distFile  } from './utils'
+import { fetchGithubPkg, modulesDir, distDir, distFile } from './utils'
 
 export async function sync(name, repo?: string, isNew: boolean = false) {
   const module = await getModule(name)
@@ -38,7 +38,7 @@ export async function sync(name, repo?: string, isNew: boolean = false) {
   if (module.repo.startsWith('nuxt-community/')) {
     module.type = 'community'
   } else if (module.repo.startsWith('nuxt/')) {
-    module.type = 'official'
+    module.type = 'popular'
   } else {
     module.type = '3rd-party'
   }
@@ -144,7 +144,7 @@ export async function getModule(name) {
     website: '',
     learn_more: '',
     category: '', // see modules/_categories.json
-    type: '', // official, community, 3rd-party
+    type: '', // popular, community, 3rd-party
     maintainers: []
   }
 

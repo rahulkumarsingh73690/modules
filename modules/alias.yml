@@ -1,4 +1,4 @@
-name: alias
+name: Php
 description: It automatically creates an alias for the components and page of the path
 repo: kdydesign/nuxt-alias-module
 npm: nuxt-alias

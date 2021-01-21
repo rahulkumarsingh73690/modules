@@ -7,7 +7,7 @@ module.exports = {
         sans: ['DM Sans', ...defaultTheme.fontFamily.sans]
       },
       colors: {
-        'forest-night': '#003c3c',
+        'forest-night': '#1e3a8a',
         'cloudy-grey': '#e6f0f0',
         'campfire-orange': '#ff6446',
         'sky-blue': '#28AAf0',

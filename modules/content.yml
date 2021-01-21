@@ -9,7 +9,7 @@ github: 'https://github.com/nuxt/content'
 website: 'https://content.nuxtjs.org'
 learn_more: ''
 category: CMS
-type: official
+type: popular
 maintainers:
   - name: Benjamin Canac
     github: benjamincanac

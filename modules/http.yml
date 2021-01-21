@@ -7,7 +7,7 @@ github: 'https://github.com/nuxt/http'
 website: 'https://http.nuxtjs.org/'
 learn_more: ''
 category: Request
-type: official
+type: popular
 maintainers:
   - name: Pooya Parsa
     github: pi0
